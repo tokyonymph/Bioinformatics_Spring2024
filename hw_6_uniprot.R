@@ -25,3 +25,5 @@ prot_structure_table$pdb_ids
 ?fetch_alphafold_prediction()
 fetch_alphafold_prediction
 alphafold <- fetch_alphafold_prediction(uniprot_ids = c("P0A799", "P08839"), return_data_frame = TRUE)
+prot_r3d <- r3dmol(alphafold)
+r3dmol::m_add_models(id = prot_r3d, data = alphafold, format = c("pdb"))

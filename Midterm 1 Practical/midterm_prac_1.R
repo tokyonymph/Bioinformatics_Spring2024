@@ -61,6 +61,9 @@ mid_1_freq <- alphabetFrequency(mid_1_msa)
 # I then read the sequence in and made a new object.
 human_6_path <- "C:/Users/emmag/OneDrive/School Work/2024-2025/SPRING 2024/ST GR Bioinformatics - BSC 6932/Bioinformatics_Spring2024/Midterm 1 Practical/h_sap_6_seq.fasta"
 human_6_dna <- readDNAStringSet(human_6_path, format = "fasta")
+
+# or it can be accessed directly from the original sequence set:
+human_6_dna <- seq_set$Homo_sapiens_6
 # I translated my new DNAStringSet sequence to protein using the Biostrings "translate" function.
 human_6_prot <- Biostrings::translate(human_6_dna)
 print(human_6_prot)

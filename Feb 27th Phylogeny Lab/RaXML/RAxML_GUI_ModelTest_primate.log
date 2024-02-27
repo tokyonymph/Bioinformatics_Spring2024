@@ -1,0 +1,206 @@
+Physical cores: 4
+Logical cores:  8
+Memory:         11.8GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\RAxML_GUI_ModelTest_primate.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            12
+  #sites:           13472
+  #patterns:        413
+  Max. thread mem:  2 MB
+
+Output:
+  Log:           C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\RAxML_GUI_ModelTest_primate.log
+  Starting tree: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\RAxML_GUI_ModelTest_primate.tree
+  Results:       C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\RAxML_GUI_ModelTest_primate.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          2/4
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> /usr/bin/modeltest-ng -d nt -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -o C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\RAxML_GUI_ModelTest_primate --force -p 2 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:06
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9    -85743.7731    171772.7972         0.0000    0.9785
+       2  TIM2+G4            7    -85757.1106    171780.4555         7.6583    0.0213
+       3  TVM+G4             8    -85757.7541    171791.2510        18.4537    0.0001
+       4  TIM3+G4            7    -85762.6474    171791.5292        18.7319    0.0001
+       5  GTR+I+G4          10    -85749.0146    171792.7887        19.9914    0.0000
+       6  TIM2+I+G4          8    -85759.8241    171795.3909        22.5937    0.0000
+       7  TPM2uf+G4          6    -85769.8026    171796.3311        23.5339    0.0000
+       8  TrN+G4             6    -85772.1700    171801.0659        28.2687    0.0000
+       9  TIM1+G4            7    -85768.4283    171803.0909        30.2936    0.0000
+      10  TIM3+I+G4          8    -85764.5559    171804.8545        32.0572    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+G4
+lnL:                -85743.7731
+Frequencies:        0.3553 0.3215 0.0791 0.2441
+Subst. Rates:       5.6902 70.1452 4.5541 4.1331 52.6020 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.3698
+Score:              171772.7972
+Weight:             0.9785
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.9999
+Gamma-Inv:          0.0001
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3747
+Alpha:              0.3694
+Alpha-P.Inv:        0.5850
+P.Inv-Alpha:        0.1733
+Frequencies:        0.3553 0.3216 0.0791 0.2440 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy --model GTR+G4
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m GTR+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9    -85743.7731    171547.5462         0.0000    0.9980
+       2  GTR+I+G4          10    -85749.0146    171560.0292        12.4831    0.0019
+       3  TIM2+G4            7    -85757.1106    171570.2212        22.6750    0.0000
+       4  TVM+G4             8    -85757.7541    171573.5083        25.9621    0.0000
+       5  TIM2+I+G4          8    -85759.8241    171577.6482        30.1021    0.0000
+       6  TIM3+G4            7    -85762.6474    171581.2948        33.7487    0.0000
+       7  TIM3+I+G4          8    -85764.5559    171587.1118        39.5656    0.0000
+       8  TVM+I+G4           9    -85764.8008    171589.6015        42.0554    0.0000
+       9  TIM1+G4            7    -85768.4283    171592.8565        45.3104    0.0000
+      10  TPM2uf+G4          6    -85769.8026    171593.6052        46.0590    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+G4
+lnL:                -85743.7731
+Frequencies:        0.3553 0.3215 0.0791 0.2441
+Subst. Rates:       5.6902 70.1452 4.5541 4.1331 52.6020 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.3698
+Score:              171547.5462
+Weight:             0.9980
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.9981
+Gamma-Inv:          0.0019
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3747
+Alpha:              0.3698
+Alpha-P.Inv:        0.6037
+P.Inv-Alpha:        0.1839
+Frequencies:        0.3553 0.3215 0.0791 0.2441 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy --model GTR+G4
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m GTR+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9    -85743.7731    171547.5462         0.0000    0.9980
+       2  GTR+I+G4          10    -85749.0146    171560.0292        12.4831    0.0019
+       3  TIM2+G4            7    -85757.1106    171570.2212        22.6750    0.0000
+       4  TVM+G4             8    -85757.7541    171573.5083        25.9621    0.0000
+       5  TIM2+I+G4          8    -85759.8241    171577.6482        30.1021    0.0000
+       6  TIM3+G4            7    -85762.6474    171581.2948        33.7487    0.0000
+       7  TIM3+I+G4          8    -85764.5559    171587.1118        39.5656    0.0000
+       8  TVM+I+G4           9    -85764.8008    171589.6015        42.0554    0.0000
+       9  TIM1+G4            7    -85768.4283    171592.8565        45.3104    0.0000
+      10  TPM2uf+G4          6    -85769.8026    171593.6052        46.0590    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+G4
+lnL:                -85743.7731
+Frequencies:        0.3553 0.3215 0.0791 0.2441
+Subst. Rates:       5.6902 70.1452 4.5541 4.1331 52.6020 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.3698
+Score:              171547.5462
+Weight:             0.9980
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.9981
+Gamma-Inv:          0.0019
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.3747
+Alpha:              0.3698
+Alpha-P.Inv:        0.6037
+P.Inv-Alpha:        0.1839
+Frequencies:        0.3553 0.3215 0.0791 0.2441 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy --model GTR+G4
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\primate.phy -m GTR+G4
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC              GTR+G4   171772.7972        0.9785
+       AIC              GTR+G4   171547.5462        0.9980
+      AICc              GTR+G4   171547.5462        0.9980
+
+Execution results written to C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\RAxML_GUI_ModelTest_primate.out
+Starting tree written to C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 27th Phylogeny Lab\RaXML\RAxML_GUI_ModelTest_primate.tree

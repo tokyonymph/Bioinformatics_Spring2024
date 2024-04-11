@@ -1,0 +1,11 @@
+1. What I did:
+
+On the raxmlGUI 2.0 program, which I managed to install on Windows from its official website, I loaded the primate.phy file and ran a model test to determine which model to use for generating my phylogenetic tree. The results determined that the best model for me to use was the BIC GTR+G4 model, which had the overall highest score. Then, I performed a maximum likelihood and rapid bootstrap analysis with 100 repetitions. I set the Lemur as the outgroup and used the GTR substitution matrix with the GAMMA substitution rate. I also added a +1 proportion of invariant sites to my analysis. Finally, I selected the raxmlHPC.exe binary and ran my analysis.
+
+2. What I found:
+
+The lemur was the outgroup for my phylogenetic tree, and it shared a common ancestor with the tarsier. The genus Saimiri, or the squirrel monkey, shared a common ancestor with the MRCA of the macaques and the great apes, including humans. All macaque species featured in the tree shared a common ancestor with each other (in other words, they were considered a clade or monophyletic group). The gibbon and the other great apes shared a common ancestor, with the gibbon being the oldest member of the clade. The orangutan shared a common ancestor of the MRCA of the gorilla, the human, and the chimpanzee. Out of all the taxa featured in the phylogenetic tree, the human and the chimpanzee were the most closely related to each other and seem to have branched off from an ancestor that shared an MCRA with the gorilla.
+
+3. Why I think this is interesting/relevant:
+
+Although it is unsurprising to me that the human and the chimpanzee were found to be the most closely related taxa on the tree, I also found it very interesting that the gibbon is included within the whole clade featuring all of the great apes and their MRCA and that Saimiri or the squirrel monkey is considered an "outgroup" of the two most recent clades featured, considering it is a monkey and not an ape unlike most of the other taxa it shares a common ancestor with. The fact that the macaques are considered a separate clade from the great apes in my generated phylogenetic tree is certainly relevant to what scientists currently understand about them from various studies, including their physical characteristics and their behavior.

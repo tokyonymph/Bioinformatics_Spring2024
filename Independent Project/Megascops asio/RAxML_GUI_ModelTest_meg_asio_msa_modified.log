@@ -1,0 +1,206 @@
+Physical cores: 4
+Logical cores:  8
+Memory:         11.8GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\RAxML_GUI_ModelTest_meg_asio_msa_modified.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            4
+  #sites:           930
+  #patterns:        14
+  Max. thread mem:  0 MB
+
+Output:
+  Log:           C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\RAxML_GUI_ModelTest_meg_asio_msa_modified.log
+  Starting tree: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\RAxML_GUI_ModelTest_meg_asio_msa_modified.tree
+  Results:       C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\RAxML_GUI_ModelTest_meg_asio_msa_modified.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          2/4
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> /usr/bin/modeltest-ng -d nt -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -o C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\RAxML_GUI_ModelTest_meg_asio_msa_modified --force -p 2 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:02
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY                4     -1419.4314      2900.3795         0.0000    0.8374
+       2  TrN                5     -1419.2766      2906.9050         6.5255    0.0321
+       3  TPM2uf             5     -1419.4098      2907.1714         6.7920    0.0281
+       4  HKY+G4             5     -1419.4316      2907.2150         6.8356    0.0275
+       5  HKY+I              5     -1419.4319      2907.2157         6.8363    0.0274
+       6  TPM3uf             5     -1419.9950      2908.3419         7.9624    0.0156
+       7  TIM1               6     -1417.1893      2909.5656         9.1862    0.0085
+       8  TIM2               6     -1417.2506      2909.6883         9.3088    0.0080
+       9  TIM3               6     -1417.4277      2910.0425         9.6631    0.0067
+      10  TPM1uf             5     -1422.5755      2913.5029        13.1235    0.0012
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY
+lnL:                -1419.4314
+Frequencies:        0.2654 0.3582 0.1446 0.2318
+Subst. Rates:       1.0000 14.6292 1.0000 1.0000 14.6292 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2900.3795
+Weight:             0.8374
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0311
+Gamma:              0.0303
+Gamma-Inv:          0.0011
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.1036
+Alpha:              86.8385
+Alpha-P.Inv:        78.7680
+P.Inv-Alpha:        0.0609
+Frequencies:        0.2652 0.3584 0.1444 0.2320 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -m 010010 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta --model HKY
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -m HKY
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM1               6     -1417.1893      2856.3786         0.0000    0.1174
+       2  TIM2               6     -1417.2506      2856.5013         0.1227    0.1105
+       3  TIM3               6     -1417.4277      2856.8555         0.4769    0.0925
+       4  HKY                4     -1419.4314      2856.8628         0.4842    0.0922
+       5  TIM2+G4            7     -1417.2476      2858.4953         2.1167    0.0408
+       6  TIM2+I             7     -1417.2626      2858.5252         2.1466    0.0401
+       7  TIM1+G4            7     -1417.2655      2858.5309         2.1523    0.0400
+       8  TrN                5     -1419.2766      2858.5531         2.1745    0.0396
+       9  TIM1+I             7     -1417.3143      2858.6285         2.2500    0.0381
+      10  TPM2uf             5     -1419.4098      2858.8196         2.4410    0.0347
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TIM1
+lnL:                -1417.1893
+Frequencies:        0.2627 0.3611 0.1414 0.2348
+Subst. Rates:       1.0000 28.3051 0.5719 0.5719 12.2201 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2856.3786
+Weight:             0.1174
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1934
+Gamma:              0.1867
+Gamma-Inv:          0.0817
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.2130
+Alpha:              77.6395
+Alpha-P.Inv:        62.7492
+P.Inv-Alpha:        0.1104
+Frequencies:        0.2632 0.3605 0.1424 0.2339 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -m 012230 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta --model TIM1
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -m TIM1
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM1               6     -1417.1893      2856.3786         0.0000    0.1174
+       2  TIM2               6     -1417.2506      2856.5013         0.1227    0.1105
+       3  TIM3               6     -1417.4277      2856.8555         0.4769    0.0925
+       4  HKY                4     -1419.4314      2856.8628         0.4842    0.0922
+       5  TIM2+G4            7     -1417.2476      2858.4953         2.1167    0.0408
+       6  TIM2+I             7     -1417.2626      2858.5252         2.1466    0.0401
+       7  TIM1+G4            7     -1417.2655      2858.5309         2.1523    0.0400
+       8  TrN                5     -1419.2766      2858.5531         2.1745    0.0396
+       9  TIM1+I             7     -1417.3143      2858.6285         2.2500    0.0381
+      10  TPM2uf             5     -1419.4098      2858.8196         2.4410    0.0347
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TIM1
+lnL:                -1417.1893
+Frequencies:        0.2627 0.3611 0.1414 0.2348
+Subst. Rates:       1.0000 28.3051 0.5719 0.5719 12.2201 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2856.3786
+Weight:             0.1174
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.1934
+Gamma:              0.1867
+Gamma-Inv:          0.0817
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.2130
+Alpha:              77.6395
+Alpha-P.Inv:        62.7492
+P.Inv-Alpha:        0.1104
+Frequencies:        0.2632 0.3605 0.1424 0.2339 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -m 012230 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta --model TIM1
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\meg_asio_msa_modified.fasta -m TIM1
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC                 HKY     2900.3795        0.8374
+       AIC                TIM1     2856.3786        0.1174
+      AICc                TIM1     2856.3786        0.1174
+
+Execution results written to C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\RAxML_GUI_ModelTest_meg_asio_msa_modified.out
+Starting tree written to C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\RAxML_GUI_ModelTest_meg_asio_msa_modified.tree

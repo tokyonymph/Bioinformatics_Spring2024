@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            5
+  #sites:           1038
+  #patterns:        20
+  Max. thread mem:  0 MB
+
+Output:
+  Log:           C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\RAxML_GUI_ModelTest_m_asio_alignment_modified.log
+  Starting tree: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\RAxML_GUI_ModelTest_m_asio_alignment_modified.tree
+  Results:       C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\RAxML_GUI_ModelTest_m_asio_alignment_modified.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          2/4
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY                4     -1583.9926      3244.3808         0.0000    0.6141
+       2  TIM1               6     -1578.9107      3248.1070         3.7261    0.0953
+       3  TrN                5     -1582.8072      3248.9550         4.5741    0.0624
+       4  HKY+I              5     -1582.8108      3248.9622         4.5814    0.0621
+       5  HKY+G4             5     -1582.9038      3249.1483         4.7674    0.0566
+       6  TPM3uf             5     -1583.8588      3251.0583         6.6775    0.0218
+       7  TPM2uf             5     -1583.9171      3251.1749         6.7940    0.0206
+       8  TrN+I              6     -1580.7879      3251.8614         7.4806    0.0146
+       9  TIM3               6     -1580.9687      3252.2232         7.8423    0.0122
+      10  TIM2               6     -1581.0138      3252.3133         7.9325    0.0116
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY
+lnL:                -1583.9926
+Frequencies:        0.2699 0.3548 0.1389 0.2364
+Subst. Rates:       1.0000 14.5693 1.0000 1.0000 14.5693 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              3244.3808
+Weight:             0.6141
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0867
+Gamma:              0.0718
+Gamma-Inv:          0.0027
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8248
+Alpha:              0.0238
+Alpha-P.Inv:        0.8898
+P.Inv-Alpha:        0.7332
+Frequencies:        0.2691 0.3556 0.1382 0.2371 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -m 010010 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta --model HKY
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -m HKY
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM1               6     -1578.9107      3183.8213         0.0000    0.2784
+       2  TIM1+G4            7     -1578.6387      3185.2773         1.4560    0.1344
+       3  TIM1+I             7     -1578.9610      3185.9221         2.1008    0.0974
+       4  TrN+I              6     -1580.7879      3187.5758         3.7544    0.0426
+       5  TIM3               6     -1580.9687      3187.9375         4.1162    0.0355
+       6  TIM2               6     -1581.0138      3188.0277         4.2063    0.0340
+       7  TIM2+I             7     -1580.1474      3188.2949         4.4735    0.0297
+       8  TIM2+G4            7     -1580.1961      3188.3922         4.5708    0.0283
+       9  TIM3+G4            7     -1580.2506      3188.5011         4.6798    0.0268
+      10  TIM3+I             7     -1580.2615      3188.5230         4.7017    0.0265
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TIM1
+lnL:                -1578.9107
+Frequencies:        0.2668 0.3576 0.1360 0.2396
+Subst. Rates:       1.0000 16.8123 0.0200 0.0200 7.0836 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              3183.8213
+Weight:             0.2784
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2529
+Gamma:              0.2522
+Gamma-Inv:          0.0783
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8363
+Alpha:              0.0495
+Alpha-P.Inv:        0.6929
+P.Inv-Alpha:        0.6882
+Frequencies:        0.2668 0.3576 0.1363 0.2393 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -m 012230 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta --model TIM1
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -m TIM1
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM1               6     -1578.9107      3183.8213         0.0000    0.2784
+       2  TIM1+G4            7     -1578.6387      3185.2773         1.4560    0.1344
+       3  TIM1+I             7     -1578.9610      3185.9221         2.1008    0.0974
+       4  TrN+I              6     -1580.7879      3187.5758         3.7544    0.0426
+       5  TIM3               6     -1580.9687      3187.9375         4.1162    0.0355
+       6  TIM2               6     -1581.0138      3188.0277         4.2063    0.0340
+       7  TIM2+I             7     -1580.1474      3188.2949         4.4735    0.0297
+       8  TIM2+G4            7     -1580.1961      3188.3922         4.5708    0.0283
+       9  TIM3+G4            7     -1580.2506      3188.5011         4.6798    0.0268
+      10  TIM3+I             7     -1580.2615      3188.5230         4.7017    0.0265
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TIM1
+lnL:                -1578.9107
+Frequencies:        0.2668 0.3576 0.1360 0.2396
+Subst. Rates:       1.0000 16.8123 0.0200 0.0200 7.0836 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              3183.8213
+Weight:             0.2784
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2529
+Gamma:              0.2522
+Gamma-Inv:          0.0783
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.8363
+Alpha:              0.0495
+Alpha-P.Inv:        0.6929
+P.Inv-Alpha:        0.6882
+Frequencies:        0.2668 0.3576 0.1363 0.2393 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -m 012230 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta --model TIM1
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Feb 1st Alignment\m_asio_alignment_modified.fasta -m TIM1
+Done

@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            5
+  #sites:           930
+  #patterns:        28
+  Max. thread mem:  0 MB
+
+Output:
+  Log:           C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\RAxML_GUI_ModelTest_meg_kenn_msa_modified.log
+  Starting tree: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\RAxML_GUI_ModelTest_meg_kenn_msa_modified.tree
+  Results:       C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\RAxML_GUI_ModelTest_meg_kenn_msa_modified.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          2/4
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY                4     -1424.4653      2924.1176         0.0000    0.7209
+       2  HKY+I              5     -1423.5597      2929.1417         5.0241    0.0585
+       3  HKY+G4             5     -1423.5856      2929.1934         5.0758    0.0570
+       4  TPM3uf             5     -1423.6180      2929.2582         5.1406    0.0552
+       5  TPM2uf             5     -1423.8084      2929.6390         5.5214    0.0456
+       6  TrN                5     -1424.3159      2930.6539         6.5363    0.0275
+       7  TPM3uf+I           6     -1422.5370      2933.9315         9.8139    0.0053
+       8  TPM3uf+G4          6     -1422.8021      2934.4617        10.3440    0.0041
+       9  TPM1uf             5     -1426.2501      2934.5224        10.4048    0.0040
+      10  TPM2uf+I           6     -1422.8405      2934.5384        10.4208    0.0039
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              HKY
+lnL:                -1424.4653
+Frequencies:        0.2721 0.3654 0.1340 0.2285
+Subst. Rates:       1.0000 17.9432 1.0000 1.0000 17.9432 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2924.1176
+Weight:             0.7209
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0695
+Gamma:              0.0678
+Gamma-Inv:          0.0024
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7875
+Alpha:              0.0215
+Alpha-P.Inv:        0.9091
+P.Inv-Alpha:        0.5981
+Frequencies:        0.2720 0.3654 0.1340 0.2286 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -m 010010 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta --model HKY
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -m HKY
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY                4     -1424.4653      2870.9306         0.0000    0.0632
+       2  TPM3uf+I           6     -1422.5370      2871.0741         0.1435    0.0588
+       3  HKY+I              5     -1423.5597      2871.1194         0.1889    0.0575
+       4  HKY+G4             5     -1423.5856      2871.1712         0.2407    0.0560
+       5  TPM3uf             5     -1423.6180      2871.2360         0.3054    0.0542
+       6  TIM1+I             7     -1421.7790      2871.5581         0.6275    0.0461
+       7  TPM3uf+G4          6     -1422.8021      2871.6043         0.6737    0.0451
+       8  TPM2uf             5     -1423.8084      2871.6168         0.6862    0.0448
+       9  TPM2uf+I           6     -1422.8405      2871.6810         0.7504    0.0434
+      10  TPM2uf+G4          6     -1422.9177      2871.8354         0.9048    0.0402
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              HKY
+lnL:                -1424.4653
+Frequencies:        0.2721 0.3654 0.1340 0.2285
+Subst. Rates:       1.0000 17.9432 1.0000 1.0000 17.9432 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2870.9306
+Weight:             0.0632
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2947
+Gamma:              0.2705
+Gamma-Inv:          0.1161
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7949
+Alpha:              0.0215
+Alpha-P.Inv:        0.4653
+P.Inv-Alpha:        0.4617
+Frequencies:        0.2717 0.3655 0.1338 0.2291 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -m 010010 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta --model HKY
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -m HKY
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  HKY                4     -1424.4653      2870.9306         0.0000    0.0632
+       2  TPM3uf+I           6     -1422.5370      2871.0741         0.1435    0.0588
+       3  HKY+I              5     -1423.5597      2871.1194         0.1889    0.0575
+       4  HKY+G4             5     -1423.5856      2871.1712         0.2407    0.0560
+       5  TPM3uf             5     -1423.6180      2871.2360         0.3054    0.0542
+       6  TIM1+I             7     -1421.7790      2871.5581         0.6275    0.0461
+       7  TPM3uf+G4          6     -1422.8021      2871.6043         0.6737    0.0451
+       8  TPM2uf             5     -1423.8084      2871.6168         0.6862    0.0448
+       9  TPM2uf+I           6     -1422.8405      2871.6810         0.7504    0.0434
+      10  TPM2uf+G4          6     -1422.9177      2871.8354         0.9048    0.0402
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              HKY
+lnL:                -1424.4653
+Frequencies:        0.2721 0.3654 0.1340 0.2285
+Subst. Rates:       1.0000 17.9432 1.0000 1.0000 17.9432 1.0000 
+Inv. sites prop:    -
+Gamma shape:        -
+Score:              2870.9306
+Weight:             0.0632
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.2947
+Gamma:              0.2705
+Gamma-Inv:          0.1161
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7949
+Alpha:              0.0215
+Alpha-P.Inv:        0.4653
+P.Inv-Alpha:        0.4617
+Frequencies:        0.2717 0.3655 0.1338 0.2291 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -m 010010 -f m -v 0 -a 0 -c 1 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -c 1 -m GTRCATX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta --model HKY
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops kennicotti\meg_kenn_msa_modified.fasta -m HKY
+Done

@@ -1,0 +1,6 @@
+The analysis was run using raxmlGUI 2.0 (version 2.0.10) as follows:
+Analysis: ML + rapid bootstrap
+Binary: raxmlHPC-PTHREADS-SSE3.exe version 8.2.12
+Results saved to: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba
+RAxML was called with these arguments:
+1.) -T 2 -f a -x 12345 -p 12345 -N 100 -m GTRGAMMAX -O -n m_wat_cho_msa.tre -s "C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta" -w "C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba"

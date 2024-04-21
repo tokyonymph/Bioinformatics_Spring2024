@@ -1,0 +1,207 @@
+Physical cores: 4
+Logical cores:  8
+Memory:         11.8GB
+Extensions:     AVX
+
+WARNING: Partition DATA: Sequences choliba_MPEG16711 and choliba_MPEG16509 are identical
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\RAxML_GUI_ModelTest_m_wat_cho_msa_modified.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            19
+  #sites:           1005
+  #patterns:        88
+  Max. thread mem:  0 MB
+
+Output:
+  Log:           C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\RAxML_GUI_ModelTest_m_wat_cho_msa_modified.log
+  Starting tree: C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\RAxML_GUI_ModelTest_m_wat_cho_msa_modified.tree
+  Results:       C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\RAxML_GUI_ModelTest_m_wat_cho_msa_modified.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          2/4
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> /usr/bin/modeltest-ng -d nt -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -o C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\RAxML_GUI_ModelTest_m_wat_cho_msa_modified --force -p 2 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:16
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN+G4             6     -2398.2867      5079.9958         0.0000    0.4615
+       2  TrN+I              6     -2398.3808      5080.1840         0.1882    0.4200
+       3  TIM3+G4            7     -2397.7027      5085.7405         5.7448    0.0261
+       4  TIM3+I             7     -2397.8200      5085.9753         5.9795    0.0232
+       5  TIM2+G4            7     -2397.9702      5086.2756         6.2798    0.0200
+       6  TIM1+I             7     -2398.0300      5086.3953         6.3995    0.0188
+       7  TIM1+G4            7     -2398.2923      5086.9197         6.9240    0.0145
+       8  HKY+I              5     -2406.1676      5088.8448         8.8490    0.0055
+       9  HKY+G4             5     -2406.2342      5088.9782         8.9824    0.0052
+      10  TIM2+I             7     -2399.9106      5090.1564        10.1606    0.0029
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TrN+G4
+lnL:                -2398.2867
+Frequencies:        0.2753 0.3544 0.1265 0.2438
+Subst. Rates:       1.0000 52.5586 1.0000 1.0000 20.8503 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.0213
+Score:              5079.9958
+Weight:             0.4615
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4707
+Gamma:              0.5277
+Gamma-Inv:          0.0015
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7677
+Alpha:              0.0214
+Alpha-P.Inv:        0.6640
+P.Inv-Alpha:        0.4137
+Frequencies:        0.2752 0.3545 0.1268 0.2436 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m 010020 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta --model TrN+G4
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m TrN+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN+G4             6     -2398.2867      4878.5733         0.0000    0.2002
+       2  TrN+I              6     -2398.3808      4878.7615         0.1882    0.1822
+       3  TIM3+G4            7     -2397.7027      4879.4053         0.8320    0.1320
+       4  TIM3+I             7     -2397.8200      4879.6401         1.0667    0.1174
+       5  TIM2+G4            7     -2397.9702      4879.9404         1.3671    0.1010
+       6  TIM1+I             7     -2398.0300      4880.0601         1.4868    0.0952
+       7  TIM1+G4            7     -2398.2923      4880.5845         2.0112    0.0732
+       8  TIM2+I+G4          8     -2398.0245      4882.0490         3.4757    0.0352
+       9  GTR+G4             9     -2397.6109      4883.2218         4.6485    0.0196
+      10  GTR+I              9     -2397.9034      4883.8068         5.2335    0.0146
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TrN+G4
+lnL:                -2398.2867
+Frequencies:        0.2753 0.3544 0.1265 0.2438
+Subst. Rates:       1.0000 52.5586 1.0000 1.0000 20.8503 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.0213
+Score:              4878.5733
+Weight:             0.2002
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4242
+Gamma:              0.5265
+Gamma-Inv:          0.0493
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7653
+Alpha:              0.0215
+Alpha-P.Inv:        0.1824
+P.Inv-Alpha:        0.1267
+Frequencies:        0.2754 0.3550 0.1264 0.2432 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m 010020 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta --model TrN+G4
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m TrN+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TrN+G4             6     -2398.2867      4881.5733         0.0000    0.2034
+       2  TrN+I              6     -2398.3808      4881.7615         0.1882    0.1851
+       3  TIM3+G4            7     -2397.7027      4882.4053         0.8320    0.1342
+       4  TIM3+I             7     -2397.8200      4882.6401         1.0667    0.1193
+       5  TIM2+G4            7     -2397.9702      4882.9404         1.3671    0.1027
+       6  TIM1+I             7     -2398.0300      4883.0601         1.4868    0.0967
+       7  TIM1+G4            7     -2398.2923      4883.5845         2.0112    0.0744
+       8  TIM2+I+G4          8     -2398.0245      4885.0490         3.4757    0.0358
+       9  TIM2+I             7     -2399.9106      4886.8212         5.2478    0.0148
+      10  GTR+G4             9     -2397.6109      4887.2218         5.6485    0.0121
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TrN+G4
+lnL:                -2398.2867
+Frequencies:        0.2753 0.3544 0.1265 0.2438
+Subst. Rates:       1.0000 52.5586 1.0000 1.0000 20.8503 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.0213
+Score:              4881.5733
+Weight:             0.2034
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.4253
+Gamma:              0.5272
+Gamma-Inv:          0.0475
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.7656
+Alpha:              0.0215
+Alpha-P.Inv:        0.1912
+P.Inv-Alpha:        0.1321
+Frequencies:        0.2754 0.3550 0.1264 0.2432 
+
+Commands:
+  > phyml  -i C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m 010020 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta --model TrN+G4
+  > paup -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta
+  > iqtree -s C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\m_wat_cho_msa_modified.fasta -m TrN+G4
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC              TrN+G4     5079.9958        0.4615
+       AIC              TrN+G4     4878.5733        0.2002
+      AICc              TrN+G4     4881.5733        0.2034
+
+Execution results written to C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\RAxML_GUI_ModelTest_m_wat_cho_msa_modified.out
+Starting tree written to C:\Users\emmag\OneDrive\School Work\2024-2025\SPRING 2024\ST GR Bioinformatics - BSC 6932\Bioinformatics_Spring2024\Independent Project\Megascops watsonii and choliba\RAxML_GUI_ModelTest_m_wat_cho_msa_modified.tree
